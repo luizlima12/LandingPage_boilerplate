@@ -1,3 +1,5 @@
+import { Globe } from "@/components/magicui/globe";
+
 export default function Home() {
-  return <></>;
+  return <Globe className="top-35" />;
 }
