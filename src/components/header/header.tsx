@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "../../../public/next.svg";
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4 bg-primary/30 text-white">
+    <header className="flex items-center justify-between p-6 bg-primary/30 text-white">
       <Image
         src={Logo}
         alt="Logo"
