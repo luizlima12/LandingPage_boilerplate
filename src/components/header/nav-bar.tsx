@@ -13,7 +13,7 @@ export default function NavBar() {
 
   return (
     <nav className="flex items-center justify-between p-4 text-white">
-      <div className="flex space-x-4">
+      <div className="space-x-4 hidden md:flex">
         {NavBarItems.map((item) => (
           <Button
             key={item.title}
