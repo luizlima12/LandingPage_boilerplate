@@ -1,9 +1,9 @@
 "use client";
-import { NavBarItems } from "@/consts/nav-items";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { NavBarItems } from "@/consts/nav-items";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const pathname = usePathname();
