@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useState } from "react";
 
 const NavBarLink = () => {
   const pathname = usePathname();
@@ -44,12 +45,13 @@ const NavBarLink = () => {
 };
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between p-4 text-white">
       <div className="space-x-4 hidden md:flex">
         <NavBarLink />
       </div>
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant={"ghost"} className="md:hidden">
             <Menu className="size-8" />
