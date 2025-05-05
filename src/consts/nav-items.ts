@@ -1,4 +1,4 @@
-import { Home, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 type NavBarItem = {
   title: string;
@@ -17,7 +17,6 @@ const NavBarItems: NavBarItem[] = [
   {
     title: "Home",
     src: "/",
-    icon: Home,
   },
   {
     title: "About",
