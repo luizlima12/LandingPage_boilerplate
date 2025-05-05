@@ -18,13 +18,13 @@ export default function NavBar() {
           <Button
             key={item.title}
             variant="link"
-            className="text-primary-foreground hover:text-primary-foreground/80 text-lg "
+            className="text-primary-foreground hover:text-primary/40 text-lg"
           >
             <Link
               href={item.src}
               className={cn(
                 `flex items-center gap-2`,
-                isActive(item.src) && "text-primary underline"
+                isActive(item.src) && "text-primary underline "
               )}
             >
               {item.title}
