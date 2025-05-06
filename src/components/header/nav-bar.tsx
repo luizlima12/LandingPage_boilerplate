@@ -15,7 +15,10 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 
-const NavBarLink = () => {
+const NavBarLink: React.FC<{
+  setOpen?: (data: boolean) => void;
+  open?: boolean;
+}> = ({ setOpen, open }) => {
   const pathname = usePathname();
   const isActive = (src: string) => {
     return pathname === src;
@@ -27,13 +30,16 @@ const NavBarLink = () => {
         <Button
           key={item.title}
           variant="link"
-          className="text-primary-foreground hover:text-primary/40 text-lg"
+          className="text-primary md:text-primary-foreground md:hover:text-popover-foreground text-lg"
+          onClick={() => {
+            if (setOpen && open) setOpen(!open);
+          }}
         >
           <Link
             href={item.src}
             className={cn(
               `flex items-center gap-2`,
-              isActive(item.src) && "text-primary underline "
+              isActive(item.src) && "text-secondary-foreground underline "
             )}
           >
             {item.title}
@@ -53,17 +59,17 @@ export default function NavBar() {
       </div>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant={"ghost"} className="md:hidden">
+          <Button className="md:hidden shadow-none hover:text-zinc-300 ">
             <Menu className="size-8" />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="w-74">
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
             <SheetDescription></SheetDescription>
           </SheetHeader>
           <div className="flex flex-col gap-2">
-            <NavBarLink />
+            <NavBarLink setOpen={setOpen} open={open} />
           </div>
         </SheetContent>
       </Sheet>
