@@ -38,8 +38,8 @@ const NavBarLink: React.FC<{
           <Link
             href={item.src}
             className={cn(
-              `flex items-center gap-2`,
-              isActive(item.src) && "text-secondary-foreground underline "
+              "flex items-center gap-2",
+              isActive(item.src) ? "text-secondary-foreground underline" : ""
             )}
           >
             {item.title}
