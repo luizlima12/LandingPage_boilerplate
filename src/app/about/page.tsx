@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
+
 export default function About() {
   return (
     <div className="flex flex-col h-[calc(100vh-150px)] items-center justify-center p-4 ">

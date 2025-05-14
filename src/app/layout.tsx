@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Landing Page",
+  title: {
+    default: "Landing Page",
+    template: "%s | Landing Page",
+  },
   description: "Landing page for the app",
 };
 

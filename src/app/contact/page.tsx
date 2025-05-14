@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
+
 export default function Contact() {
   return (
     <div className="flex flex-col h-[calc(100vh-150px)] items-center justify-center p-4 ">
