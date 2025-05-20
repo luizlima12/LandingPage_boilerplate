@@ -14,6 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { useScrollToElement } from "@/hooks/use-scroll-to-element";
 
 const NavBarLink: React.FC<{
   setOpen?: (data: boolean) => void;
@@ -23,6 +24,7 @@ const NavBarLink: React.FC<{
   const isActive = (src: string) => {
     return pathname === src;
   };
+  const { scrollToElement } = useScrollToElement();
 
   return (
     <>
@@ -32,6 +34,7 @@ const NavBarLink: React.FC<{
           variant="link"
           className="text-primary md:text-primary-foreground md:hover:text-popover-foreground text-lg"
           onClick={() => {
+            scrollToElement(item.src);
             if (setOpen && open) setOpen(!open);
           }}
         >

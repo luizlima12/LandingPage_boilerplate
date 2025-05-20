@@ -56,6 +56,7 @@ const ScrollAnimations: React.FC = () => {
     <>
       {["Seção 1", "Seção 2", "Seção 3"].map((section, index) => (
         <div
+          id="section"
           key={index}
           ref={(el) => {
             if (el) sectionsRef.current[index] = el;
@@ -70,6 +71,7 @@ const ScrollAnimations: React.FC = () => {
       ))}
 
       <div
+        id="parallax-section"
         ref={parallaxSectionRef}
         className="relative h-[400px] overflow-hidden"
       >

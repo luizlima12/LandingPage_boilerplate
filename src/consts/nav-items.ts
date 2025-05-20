@@ -16,7 +16,7 @@ type NavBarItem = {
 const NavBarItems: NavBarItem[] = [
   {
     title: "Home",
-    src: "/",
+    src: "",
   },
   {
     title: "About",
@@ -24,7 +24,7 @@ const NavBarItems: NavBarItem[] = [
   },
   {
     title: "Projects",
-    src: "/projects",
+    src: "timeline",
   },
   {
     title: "Contact",

@@ -7,7 +7,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-zinc-100">
+    <div className="min-h-screen bg-zinc-100 mt-[121.5px]">
       <HorizontalScrollText />
       <ScrollAnimations />
       <AnimatedSvgScroll />

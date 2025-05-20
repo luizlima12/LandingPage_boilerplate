@@ -91,6 +91,7 @@ const AnimatedSvgScroll: React.FC = () => {
 
   return (
     <div
+      id="animated-svg-scroll"
       ref={sectionRef}
       className="py-24 bg-gradient-to-b from-zinc-900 to-zinc-800 text-center text-white"
     >
